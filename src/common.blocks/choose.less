@@ -1,0 +1,37 @@
+.choose {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 110px;
+  margin-top: 90px;
+  color: #fff;
+  background: linear-gradient(rgba(43, 40, 49, 0.7), rgba(43, 40, 49, 0.7)),
+    url("../assets/img/choose_bg.jpg") center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.choose__desc {
+  max-width: 580px;
+}
+
+.choose__img {
+  position: absolute;
+  left: calc(100% - 38%);
+  bottom: 0;
+}
+
+.choose__link {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media(max-width: 920px) {
+  .choose {
+    margin-top: 0;
+  }
+
+  .choose__img {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+.differences {
+  padding: 88px 0;
+}
+
+.differences__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.differences__img {
+  margin-right: 16px;
+}
+
+.differences__desc {
+  max-width: 576px;
+}
+
+.differences__link {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media(max-width: 920px) {
+  .differences__img {
+    display: none;
+  }
+}
