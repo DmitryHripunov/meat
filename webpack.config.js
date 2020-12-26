@@ -44,6 +44,8 @@ module.exports = {
   watch: isDevelopment,
   devtool: isDevelopment ? 'inline-source-map' : false,
   devServer: {
+    port: 4200,
+    hot: isDevelopment,
     contentBase: path.join(__dirname, 'src/static/'),
     noInfo: isDevelopment,
     overlay: {
@@ -105,17 +107,23 @@ module.exports = {
           // attrs: [':data-src'],
           interpolate: true, // добавляет возможность вставлять в аттрибуты
           // элементов картинки через ES6 string interpolation синтаксис
+          attrs: [
+            'img:src', 
+            'source:srcset', 
+            'video:poster', 
+            'video:src',
+          ],
         },
       },
     },
 
     {
-      test: /\.(png|jpe?g|gif)$/,
+      test: /\.(png|jpe?g|gif|svg|mp4)$/,
       loaders: [{
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'img/',
+          outputPath: 'assets/img/',
         },
       },
       'img-loader',
@@ -141,7 +149,7 @@ module.exports = {
     },
 
     {
-      test: /\.(svg|eot|ttf|woff|woff2)$/,
+      test: /\.(eot|ttf|woff|woff2)$/,
       exclude: [
         path.resolve(__dirname, './src/assets/svg'),
         path.resolve(__dirname, './src/common.blocks'),
