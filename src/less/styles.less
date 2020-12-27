@@ -1,6 +1,18 @@
-@import (reference) './fonts.less';
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-regular-webfont.woff2") format("woff2"),
+  url("../assets/fonts/montserrat-regular-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 
-@import '../common.blocks/header.less';
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+  url("../assets/fonts/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
 
 :root { 
   --color-brand:#FFB71B;
@@ -76,7 +88,6 @@ ul {
   position: relative;
   font-weight: 700;
   font-size: 32px;
-  letter-spacing: 1.5px;
   margin-bottom: 32px;
   z-index: 1;
   &::before {
@@ -100,14 +111,11 @@ ul {
 
 .section-desc {
   line-height: 24px;
-  word-spacing: 1.4px;
-  letter-spacing: 0.9px;
   margin-bottom: 32px;
   @media(max-width: 620px) {
-    margin-bottom: 24px;
-    line-height: 19px;
-    word-spacing: -1.6px;
-    letter-spacing: -0.1px;
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -133,7 +141,8 @@ ul {
 
 .download-link {
   position: relative;
-  letter-spacing: 1px;
+  display: inline-block;
+  letter-spacing: .1px;
   text-decoration: underline;
   &:hover {
     text-decoration: none;
@@ -152,13 +161,12 @@ ul {
 .footnote {
   position: absolute;
   display: block;
-  height: 110%;
   font-weight: 700;
   font-size: 96px;
   text-align: left;
   opacity: .1;
   color: #858585;
-  top: -8px;
+  top: 2px;
   left: calc(100% - 8px);
   writing-mode: vertical-lr;
   @media(max-width: 1660px) {

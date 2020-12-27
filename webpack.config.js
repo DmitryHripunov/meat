@@ -107,12 +107,6 @@ module.exports = {
           // attrs: [':data-src'],
           interpolate: true, // добавляет возможность вставлять в аттрибуты
           // элементов картинки через ES6 string interpolation синтаксис
-          attrs: [
-            'img:src', 
-            'source:srcset', 
-            'video:poster', 
-            'video:src',
-          ],
         },
       },
     },

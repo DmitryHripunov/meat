@@ -4,10 +4,11 @@
 
 .price__desc {
   max-width: 940px;
+  margin-bottom: 27px;
 }
 
 .price__table-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 45px;
 }
 
 .price__btn {
@@ -16,12 +17,12 @@
   margin: 0 auto 32px;
 }
 
-.download-link {
-  display: block;
-  text-align: center;
+.price__link {
+  display: table;
+  margin: auto;
 }
 
-@media(max-width: 1120px) {
+@media(max-width: 1160px) {
   .price__table-wrapper {
     overflow-x: scroll;
   }
@@ -30,5 +31,10 @@
 @media(max-width: 620px) {
   .price {
     padding-top: 20px;
+  }
+
+  .price__desc {
+    max-width: 940px;
+    margin-bottom: 21px;
   }
 }

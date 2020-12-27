@@ -45,10 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         required: true,
         email: true,
       },
-      textarea: {
-        required: true,
-        minLength: 3,
-      },
       tel: {
         required: true,
         function: () => {
